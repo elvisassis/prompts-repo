@@ -1,4 +1,4 @@
-# few-shot-template.md
+# 🔹 Few-Shot Prompt Template
 
 # 🔹 Few-Shot Prompt Template
 
@@ -7,16 +7,30 @@ Este template fornece ao modelo alguns exemplos antes de pedir a resposta. Isso 
 
 ## Estrutura do Prompt
 
-- Exemplo 1: [input] -> [output]
-- Exemplo 2: [input] -> [output]
+### Exemplo 1: Tradução Simples
 
-**Exemplo:**
+- **Instrução:** Forneça alguns exemplos de tradução para ensinar o padrão.
 
-- Exemplo 1: Traduza "Hello" para francês -> "Bonjour"
-- Exemplo 2: Traduza "Goodbye" para francês -> "Au revoir"
-- Agora complete:
-- Traduza "Thank you" para francês ->
+- **Prompt:**
+  - Traduza "Hello" para francês -> "Bonjour"
+  - Traduza "Goodbye" para francês -> "Au revoir"
+  - Agora complete:
+  - Traduza "Thank you" para francês ->
 
+- **Resultado Esperado:** "Merci"
 
-## Resultado Esperado
-"Merci"
+### Exemplo 2: Classificação e Extração em Formato JSON
+
+- **Instrução:** Ensine o modelo a classificar o sentimento de uma frase e extrair a palavra-chave, retornando a saída em formato JSON.
+
+- **Prompt:**
+  - **Frase:** "Amei o novo celular, a câmera é incrível!"
+  - **Análise:** `{"sentimento": "positivo", "palavra_chave": "câmera"}`
+
+  - **Frase:** "O serviço de entrega demorou muito e o produto veio errado."
+  - **Análise:** `{"sentimento": "negativo", "palavra_chave": "entrega"}`
+
+  - **Frase:** "A bateria do notebook dura o dia todo, mas o teclado é um pouco barulhento."
+  - **Análise:**
+
+- **Resultado Esperado:** `{"sentimento": "misto", "palavra_chave": "bateria"}`
